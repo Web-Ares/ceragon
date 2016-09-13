@@ -1,0 +1,135 @@
+/* popup */
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.3);
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  padding: 20px;
+  overflow: hidden;
+  z-index: 11;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+
+  .popup__close {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 19px;
+    height: 14px;
+    border: none;
+    z-index: 4;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/icon-close.png") no-repeat center;
+      background-size: 50%;
+      content: '';
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    top: auto !important;
+  }
+
+  &__content {
+    display: none;
+    padding: 10px 20px 10px 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 30px;
+      color: #176697;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__scroll {
+    height: 60vh;
+    padding: 0 20px 0 10px;
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    display: block;
+    width: 92px;
+    margin: 0 auto;
+    padding: 11px 20px;
+    text-align: center;
+    border: none;
+    background: #be1f2d;
+    color: #fff;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+    @include font-light();
+
+    &:hover {
+      background: #eeeeee;
+      color: #4c4c4f;
+    }
+  }
+}
+.popup_opened {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.popup_hide {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.nicescroll-rails {
+  z-index: 10 !important;
+}
+
+@media (min-width: $medium) {
+  .popup {
+
+    .popup__close {
+      width: 38px;
+      height: 28px;
+    }
+
+    &__wrap {
+      height: 80vh;
+      padding: 0;
+    }
+
+    &__content {
+      padding: 30px 50px 30px 30px;
+    }
+
+    &__scroll {
+      padding: 0 60px 0 20px;
+      margin-bottom: 30px;
+    }
+
+  }
+}

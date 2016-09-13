@@ -1,0 +1,111 @@
+/* --------------- marketing --------------- */
+.marketing {
+  padding: 46px 0 0;
+  border-top: 1px solid #4c4c4f;
+
+  .marketing__item {
+    display: block;
+  }
+
+  .marketing__title {
+    display: block;
+    position: relative;
+    margin-bottom: 18px;
+    padding-bottom: 7px;
+    font-size: 24px;
+    color: #be1f2d;
+
+    &:after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: #be1f2d;
+      content: '';
+    }
+  }
+
+  .marketing__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .marketing__link {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #4c4c4f;
+    transition: color .3s ease-in-out;
+
+    &:hover {
+      color: #be1f2d;
+
+      span:after { transform: matrix(-1,0,0,1,0,0) }
+    }
+
+    span {
+      display: inline-block;
+      position: relative;
+      max-width: 100%;
+      padding-right: 12px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #be1f2d;
+        content: '>';
+        transition: transform .3s ease-in-out;
+      }
+
+    }
+
+    time {
+      display: block;
+      margin: -2px 0 4px;
+      font-size: .8em;
+      color: #126496;
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .marketing {
+    display: flex;
+    flex-wrap: wrap;
+
+    .marketing__item {
+      width: calc(50% - 15px);
+      margin: 0 0 26px 30px;
+
+      &:nth-child(2n + 1) { margin-left: 0; }
+    }
+  }
+}
+
+@media (min-width: $medium) {
+  .marketing {
+
+    .marketing__item {
+      width: calc(33.33333% - 20px);
+      margin: 0 0 26px 30px;
+
+      &:nth-child(3n + 1) { margin-left: 0; }
+      &:nth-child(2n + 1) { margin: 0 0 26px 30px; }
+    }
+  }
+}
+
+@media (min-width: $large) {
+  .marketing {
+
+  }
+}
+/* --------------- /marketing --------------- */

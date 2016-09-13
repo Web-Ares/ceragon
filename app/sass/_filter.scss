@@ -1,0 +1,51 @@
+/* --------------- filter --------------- */
+.filter {
+  padding: 21px 0;
+  margin-bottom: 9px;
+
+  .filter__item {
+    margin-bottom: 20px;
+  }
+
+  .filter__btn {
+    display: block;
+    width: 100%;
+    min-width: 115px;
+    padding: 11px 20px;
+    text-align: center;
+    border: none;
+    background: #be1f2d;
+    color: #fff;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+    @include font-light();
+
+    &:hover {
+      background: #4c4c4f;
+      color: #4c4c4f;
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .filter {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+}
+
+@media (min-width: $large) {
+  .filter {
+
+  }
+}
+/* --------------- /filter --------------- */

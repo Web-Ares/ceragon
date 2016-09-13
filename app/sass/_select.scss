@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/*
+    websters-select styles
+    version: 18.11.2015
+
+    websters-select
+
+*/
+
+/* ---------------- websters-select ------------------ */
+.websters-select{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  min-width: 235px;
+  font-size: 16px;
+  background: #eeeeee;
+}
+.websters-select:before{
+  content: '\2228';
+  @include absoluteCenterY();
+  right: 15px;
+  font-size: 1.2em;
+}
+.websters-select__item {
+  display: block;
+  position: relative;
+  padding: 11px 30px 11px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+  font-size: 18px;
+  color: #4c4c4f;
+}
+.websters-select_mobile select {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 100%;
+  bottom: -1px;
+}
+.websters-select_custom select{
+  display: none;
+}
+.websters-select__popup {
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 10;
+  overflow: hidden;
+  background: #f9fcfa;
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  margin-left: -1px;
+  min-width: 100px;
+  border-top: 2px solid #176697;
+}
+.websters-select__popup ul {
+  z-index: 1;
+}
+.websters-select__popup li {
+  padding: 11px 30px 11px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:first-child { border-top: none; }
+}
+.websters-select__popup li:hover,
+.websters-select__popup li.active:hover {
+  color: #fff;
+  background: #be1f2d;
+}
+.websters-select__popup li.active {
+  color: #176697;
+}
+/* ---------------- /websters-select ------------------ */
