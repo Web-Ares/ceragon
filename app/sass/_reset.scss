@@ -9,6 +9,9 @@
 	color: #000;
 	@include transition( color, 0.3 );
 }
+input::-ms-clear {
+	display: none;
+}
 .placeholder {
 	color: #000;
 	@include transition( color, 0.3 );

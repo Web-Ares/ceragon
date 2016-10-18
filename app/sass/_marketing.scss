@@ -83,9 +83,9 @@
 
     .marketing__item {
       width: calc(50% - 15px);
-      margin: 0 0 26px 30px;
+      padding: 0 0 26px 30px;
 
-      &:nth-child(2n + 1) { margin-left: 0; }
+      &:nth-child(2n + 1) { padding-left: 0; }
     }
   }
 }
@@ -95,10 +95,9 @@
 
     .marketing__item {
       width: calc(33.33333% - 20px);
-      margin: 0 0 26px 30px;
+      padding: 0 0 26px 30px;
 
-      &:nth-child(3n + 1) { margin-left: 0; }
-      &:nth-child(2n + 1) { margin: 0 0 26px 30px; }
+      &:nth-child(2n + 1) { padding: 0 0 26px 30px; }
     }
   }
 }
